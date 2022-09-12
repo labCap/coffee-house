@@ -510,6 +510,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: all 0.4s linear;
+}
+.form._active-anim {
+  transition: all 0.4s linear 0.3s;
+  opacity: 1;
 }
 .form__input {
   width: 100%;
@@ -522,8 +528,6 @@ a {
   font-size: 1.25rem;
   line-height: 150%;
   transition: all 0.3s linear;
-  transform: translateY(120%);
-  opacity: 0;
 }
 @supports (margin-bottom: clamp( 0.9375rem , 0.6748737374rem  +  1.3131313131vw , 1.75rem )) {
   .form__input {
@@ -546,11 +550,6 @@ a {
   font-size: 1.25rem;
   line-height: 150%;
 }
-.form__input._active-anim {
-  transition: all 0.3s linear 0.3s;
-  transform: translateY(0%);
-  opacity: 1;
-}
 .form__btn {
   border: 3px solid #ffffff;
   padding: 10px 21px;
@@ -561,8 +560,6 @@ a {
   line-height: 150%;
   text-transform: uppercase;
   transition: all 0.3s linear;
-  transform: translateY(120%);
-  opacity: 0;
 }
 @supports (padding-top: clamp( 0.25rem , 0.1287878788rem  +  0.6060606061vw , 0.625rem )) {
   .form__btn {
@@ -587,11 +584,6 @@ a {
 .form__btn:hover, .form__btn:focus {
   background-color: #817070;
   color: #fff;
-}
-.form__btn._active-anim {
-  transition: all 0.3s linear 0.6s;
-  transform: translateY(0%);
-  opacity: 1;
 }
 
 .footer {
